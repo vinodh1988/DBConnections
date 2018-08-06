@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelFirstStoreContainer" CdmEntityContainer="ModelFirstContainer">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelFirst.Department)">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="DepartmentNo" ColumnName="DepartmentNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workers">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelFirst.Worker)">
+        <MappingFragment StoreEntitySet="Workers">
+          <ScalarProperty Name="WorkerID" ColumnName="WorkerID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="DepartmentDepartmentNo" ColumnName="DepartmentDepartmentNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

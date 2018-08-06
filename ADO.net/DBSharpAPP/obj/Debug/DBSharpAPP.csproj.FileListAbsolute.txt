@@ -1,0 +1,12 @@
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\bin\Debug\DBSharpAPP.exe.config
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\bin\Debug\DBSharpAPP.exe
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\bin\Debug\DBSharpAPP.pdb
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\obj\Debug\DBSharpAPP.csprojAssemblyReference.cache
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\obj\Debug\DBSharpAPP.csproj.CoreCompileInputs.cache
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\obj\Debug\DBSharpAPP.exe
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\obj\Debug\DBSharpAPP.pdb
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\bin\Debug\EntityFramework.dll
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\bin\Debug\EntityFramework.xml
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VinodhKumar\source\repos\DBSharpAPP\DBSharpAPP\obj\Debug\DBSharpAPP.csproj.CopyComplete

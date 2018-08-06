@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tvsModelStoreContainer" CdmEntityContainer="tvsEntities1">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="tvsModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="AnnualIncome" ColumnName="AnnualIncome" />
+          <ScalarProperty Name="Sno" ColumnName="Sno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="tvsModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="Sno" ColumnName="Sno" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

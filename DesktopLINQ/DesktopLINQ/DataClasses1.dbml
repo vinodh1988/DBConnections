@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="tvs" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-NUIRMP2\SQLEXPRESS;Initial Catalog=tvs;Integrated Security=True" SettingsObjectName="DesktopLINQ.My.MySettings" SettingsPropertyName="tvsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Person" Member="Persons">
+    <Type Name="Person">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Person_Employee" Member="Employees" ThisKey="Sno" OtherKey="Sno" Type="Employee" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employee" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="EmployeeID" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Designation" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="AnnualIncome" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Association Name="Person_Employee" Member="Person" ThisKey="Sno" OtherKey="Sno" Type="Person" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,12 @@
+c:\users\vinodhkumar\source\repos\DesktopLINQ\DesktopLINQ\bin\Debug\DesktopLINQ.exe.config
+c:\users\vinodhkumar\source\repos\DesktopLINQ\DesktopLINQ\bin\Debug\DesktopLINQ.exe
+c:\users\vinodhkumar\source\repos\DesktopLINQ\DesktopLINQ\bin\Debug\DesktopLINQ.pdb
+c:\users\vinodhkumar\source\repos\DesktopLINQ\DesktopLINQ\bin\Debug\DesktopLINQ.xml
+c:\users\vinodhkumar\source\repos\DesktopLINQ\DesktopLINQ\obj\Debug\DesktopLINQ.vbprojAssemblyReference.cache
+c:\users\vinodhkumar\source\repos\DesktopLINQ\DesktopLINQ\obj\Debug\DesktopLINQ.Resources.resources
+c:\users\vinodhkumar\source\repos\DesktopLINQ\DesktopLINQ\obj\Debug\DesktopLINQ.vbproj.GenerateResource.cache
+c:\users\vinodhkumar\source\repos\DesktopLINQ\DesktopLINQ\obj\Debug\DesktopLINQ.vbproj.CoreCompileInputs.cache
+c:\users\vinodhkumar\source\repos\DesktopLINQ\DesktopLINQ\obj\Debug\DesktopLINQ.exe
+c:\users\vinodhkumar\source\repos\DesktopLINQ\DesktopLINQ\obj\Debug\DesktopLINQ.xml
+c:\users\vinodhkumar\source\repos\DesktopLINQ\DesktopLINQ\obj\Debug\DesktopLINQ.pdb
+C:\Users\VinodhKumar\source\repos\DesktopLINQ\DesktopLINQ\obj\Debug\DesktopLINQ.CityBox.resources

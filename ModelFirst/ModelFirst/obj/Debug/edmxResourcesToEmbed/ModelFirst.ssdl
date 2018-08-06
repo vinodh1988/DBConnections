@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelFirst.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelFirstStoreContainer">
+    <EntitySet Name="Departments" EntityType="ModelFirst.Store.Departments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Workers" EntityType="ModelFirst.Store.Workers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="DepartmentWorker" Association="ModelFirst.Store.DepartmentWorker">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Worker" EntitySet="Workers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="DepartmentNo" />
+    </Key>
+    <Property Name="DepartmentNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Workers">
+    <Key>
+      <PropertyRef Name="WorkerID" />
+    </Key>
+    <Property Name="WorkerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Place" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DepartmentDepartmentNo" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="DepartmentWorker">
+    <End Role="Department" Type="ModelFirst.Store.Departments" Multiplicity="1" />
+    <End Role="Worker" Type="ModelFirst.Store.Workers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentNo" />
+      </Principal>
+      <Dependent Role="Worker">
+        <PropertyRef Name="DepartmentDepartmentNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

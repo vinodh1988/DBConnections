@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MyModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="MyModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Vehicles" EntityType="MyModel.Vehicle" />
+    <EntitySet Name="Cars1" EntityType="MyModel.Cars" />
+    <AssociationSet Name="VehicleCars" Association="MyModel.VehicleCars">
+      <End Role="Vehicle" EntitySet="Vehicles" />
+      <End Role="Cars" EntitySet="Cars1" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="VehicleID" />
+    </Key>
+    <Property Name="VehicleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" Nullable="false" />
+    <NavigationProperty Name="Cars" Relationship="MyModel.VehicleCars" FromRole="Vehicle" ToRole="Cars" />
+  </EntityType>
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="CarID" />
+    </Key>
+    <Property Name="CarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Price" Type="String" Nullable="false" />
+    <Property Name="Brand" Type="String" Nullable="false" />
+    <NavigationProperty Name="Vehicle" Relationship="MyModel.VehicleCars" FromRole="Cars" ToRole="Vehicle" />
+    <Property Name="VehicleVehicleID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="VehicleCars">
+    <End Type="MyModel.Vehicle" Role="Vehicle" Multiplicity="1" />
+    <End Type="MyModel.Cars" Role="Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="VehicleID" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="VehicleVehicleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

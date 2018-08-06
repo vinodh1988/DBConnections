@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tvsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="numeric" Precision="6" Scale="0" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AnnualIncome" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Sno" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="Sno" />
+    </Key>
+    <Property Name="Sno" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Employee_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Sno" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Sno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="tvsModelStoreContainer">
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Employee_Person" Association="Self.FK_Employee_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
